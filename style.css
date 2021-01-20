@@ -1,0 +1,93 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #000822;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+}
+
+.container .signature path {
+  fill: transparent;
+  stroke: #31e8ff;
+  stroke-miterlimit: 10;
+  stroke-width: 6px;
+  stroke-dasharray: 1995;
+  stroke-dashoffset: 0;
+}
+
+line {
+  fill: none;
+  stroke: #31e8ff;
+  stroke-miterlimit: 10;
+  stroke-width: 6px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 0;
+}
+
+.container .heart {
+  animation: animate-signature 4s linear forwards infinite;
+}
+
+@keyframes animate-signature {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1995;
+  }
+  80% {
+    stroke-dashoffset: 3990;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3990;
+    fill: #31e8ff;
+  }
+}
+
+.container .letter {
+  animation: animate-letter 4s linear forwards infinite;
+}
+
+@keyframes animate-letter {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1995;
+  }
+  80% {
+    stroke-dashoffset: 3990;
+  }
+  100% {
+    stroke-dashoffset: 3990;
+  }
+}
+
+.container line {
+  animation: animate-line 4s linear forwards infinite;
+}
+
+@keyframes animate-line {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 125;
+  }
+  80% {
+    stroke-dashoffset: 250;
+  }
+  100% {
+    stroke-dashoffset: 250;
+  }
+}
